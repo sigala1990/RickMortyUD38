@@ -1,0 +1,25 @@
+
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-md-4 g-3 m-5" *ngIf="character!=null; else espera">
+<table  class="table col-10 text-center">
+  <tr  *ngFor="let char of character | keyvalue ">
+    <!-- <td *ngIf="char.key == 'image'">{{char.key}}</td> -->
+    <td *ngIf="char.key == 'image'"><img src="{{char.value}}"></td>
+  </tr>
+  <tr *ngFor="let char of character | keyvalue">
+    <!-- <td  *ngIf="char.key != 'image'">{{char.key}}</td> -->
+    <td  *ngIf="char.key != 'image'">{{char.value}}</td>
+  </tr>
+
+</table>
+</div>
+
+
+<ng-template #espera>
+  <div class="text-center mt-5">
+    <button class="btn btn-primary" type="button" disabled>
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+      Loading...
+    </button>
+  </div>
+</ng-template>

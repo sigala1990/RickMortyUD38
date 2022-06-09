@@ -8,12 +8,14 @@ import { CharacterAppComponent } from './character-app/character-app.component';
 import { AboutAppComponent } from './about-app/about-app.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { DetailsComponent } from './details/details.component';
 @NgModule({
   declarations: [
     AppComponent,
     HomeAppComponent,
     CharacterAppComponent,
-    AboutAppComponent
+    AboutAppComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
